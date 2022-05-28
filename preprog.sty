@@ -1,0 +1,38 @@
+%こねこ。のテンプレート（ver 2.1）
+%Copyright © 2021-2022 こねこ。 All Rights Reserved.
+%情報系の設定
+%%%%%%%%%%%%%%%%%%%%%%%%触るな%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{moreverb}
+
+\newtcbox{\code}[1][]{
+  colback=gray!10!white,
+  colframe=gray!20!white,
+  boxrule=1pt,
+  left=0mm,right=0mm,top=0mm,bottom=0mm,
+  box align=base,
+  nobeforeafter,
+  fontupper=\ttfamily
+}
+\lstset{ %
+  backgroundcolor=\color{white},
+  basicstyle=\linespread{0.8}\ttfamily\footnotesize,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  breaklines=true,
+  captionpos=t,
+  commentstyle=\color{green},
+  keywordstyle=\color{blue},
+  stringstyle=\color{red},
+  frame=single,
+  caption=\lstname,
+  title=\lstname,
+  columns=flexible,
+  extendedchars=true,
+  %inputpathを変えると，読むソースコードの場所を指定できる
+  inputpath=files
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

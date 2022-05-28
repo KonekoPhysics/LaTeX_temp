@@ -1,0 +1,82 @@
+%こねこ。のテンプレート（ver 2.1）
+%Copyright © 2021-2022 こねこ。 All Rights Reserved.
+%フォントの設定
+%%%%%%%%%%%%%%%%%%%準備（触るな）%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\def\@iroha#1{%
+  \ifcase#1\or い\or ろ\or は\or に\or ほ\or へ\or と\or ち\or り\or ぬ\or る\or を\or
+  わ\or か\or よ\or た\or れ\or そ\or つ\or ね\or な\or ら\or む\or
+  う\or ゐ\or の\or お\or く\or や\or ま\or け\or ふ\or こ\or え\or て\or 
+  あ\or さ\or き\or ゆ\or め\or み\or し\or ゑ\or ひ\or も\or せ\or す\else\@ctrerr\fi}
+\def\@kkana#1{%
+  \ifcase#1\or ア\or イ\or ウ\or エ\or オ\or カ\or キ\or ク\or ケ\or コ\or
+  サ\or シ\or ス\or セ\or ソ\or タ\or チ\or ツ\or テ\or ト\or
+  ナ\or ニ\or ヌ\or ネ\or ノ\or ハ\or ヒ\or フ\or ヘ\or ホ\else\@ctrerr\fi}
+\def\@hkana#1{%
+  \ifcase#1\or あ\or い\or う\or え\or お\or か\or き\or く\or け\or こ\or 
+  さ\or し\or す\or せ\or そ\or た\or ち\or つ\or て\or と\or 
+  な\or に\or ぬ\or ね\or の\or は\or ひ\or ふ\or へ\or ほ\else\@ctrerr\fi}
+\def\@arabicz#1{%
+  \ifcase#1 ０\or １\or ２\or ３\or ４\or ５\or ６\or ７\or ８\or ９\or １０\or
+  １１\or １２\or １３\or １４\or １５\or １６\or １７\or １８\or １９\or ２０\or 
+  ２１\or ２２\or ２３\or ２４\or ２５\or ２６\else\@ctrerr\fi}
+\def\@Alphz#1{%
+  \ifcase#1\or Ａ\or Ｂ\or Ｃ\or Ｄ\or Ｅ\or Ｆ\or Ｇ\or Ｈ\or Ｉ\or Ｊ\or
+  Ｋ\or Ｌ\or Ｍ\or Ｎ\or Ｏ\or Ｐ\or Ｑ\or Ｒ\or Ｓ\or Ｔ\or Ｕ\or Ｖ\or Ｗ\or Ｘ\or
+  Ｙ\or Ｚ\else\@ctrerr\fi}
+\def\@alphz#1{%
+  \ifcase#1\or ａ\or ｂ\or ｃ\or ｄ\or ｅ\or ｆ\or ｇ\or ｈ\or ｉ\or ｊ\or
+  ｋ\or ｌ\or ｍ\or ｎ\or ｏ\or ｐ\or ｑ\or ｒ\or ｓ\or ｔ\or ｕ\or ｖ\or ｗ\or ｘ\or
+  ｙ\or ｚ\else\@ctrerr\fi}
+
+%%%%%%%%%%%%%%%%%%%%%%全角順序%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%いろは
+\def\iroha#1{\expandafter\@iroha\csname c@#1\endcsname}
+%カナ
+\def\kkana#1{\expandafter\@kkana\csname c@#1\endcsname}
+%かな
+\def\hkana#1{\expandafter\@hkana\csname c@#1\endcsname}
+%１２３ 全角
+\def\arabicz#1{\expandafter\@arabicz\csname c@#1\endcsname}
+%ＡＢＣ 全角
+\def\Alphz#1{\expandafter\@Alphz\csname c@#1\endcsname}
+%ａｂｃ 全角
+\def\alphz#1{\expandafter\@alphz\csname c@#1\endcsname}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%日本語フォントの設定%%%%%%%%%%%%%%%%%%%%
+
+%otfパッケージの使用
+\usepackage[deluxe]{otf}
+
+%フォントの使用
+\usepackage[hiragino-pron]{pxchfon}
+
+%明朝体の設定
+%\setminchofont{tmincho.ttc}
+
+%ゴシック体の設定
+\setgothicfont{HiraKakuProN-W6.otf}
+
+%%%%%%%%%%%%%%%%%%欧文フォントの設定%%%%%%%%%%%%%%%%%%%%%%
+
+%おまじない
+\usepackage[T1]{fontenc}
+
+%サンセリフ体を大きさ95%に調整した Helvetica 系に
+\usepackage[scaled]{helvet}  
+
+%タイプライタ体を Courier New 系に
+\usepackage{courier}
+
+%%%%%%%%%%%%%%%%%%数式フォントの設定%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{comment}
+\usepackage{ceo}
+\newcommand{\x}{\ceoi{\char"D1}}
+\newcommand{\y}{\ceoi{\char"D2}}
+\end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

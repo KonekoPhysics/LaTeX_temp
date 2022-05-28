@@ -1,0 +1,60 @@
+%こねこ。のテンプレート（ver 2.1）
+%Copyright © 2021-2022 こねこ。 All Rights Reserved.
+%化学系の設定
+%%%%%%%%%%%%%%%%%%%準備（触るな）%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{mhchem}
+\usepackage[dvipdfmx]{pict2e}
+
+%%%%%%%%%%%%%%%mhchemでベンゼン環を書く%%%%%%%%%%%%%%%
+
+% 横向きベンゼン \benzene
+\def\benzene{{\unitlength.1pt%
+\raisebox{-7pt}{\begin{picture}(223,195)%
+\linethickness{.5pt}%
+\font\tenln=linew10%
+\put(0,96){\line(10,17){56}}%
+\put(54,191){\line(1,0){114}}%
+\put(166,191){\line(10,-17){56}}%
+\put(0,98){\line(10,-17){56}}%
+\put(54,5){\line(1,0){114}}%
+\put(166,5){\line(10,17){56}}%
+\put(23,98){\line(10,17){45}}%
+\put(155,173){\line(10,-17){45}}%
+\put(66,22){\line(1,0){90}}%
+\end{picture}}}}
+
+% 横向きフェニル基 \phenyl
+\def\phenyl{{\unitlength.1pt%
+\raisebox{-7pt}{\begin{picture}(301,195)%
+\linethickness{.5pt}%
+\font\tenln=linew10%
+\put(0,96){\line(10,17){56}}%
+\put(54,191){\line(1,0){114}}%
+\put(166,191){\line(10,-17){56}}%
+\put(0,98){\line(10,-17){56}}%
+\put(54,5){\line(1,0){114}}%
+\put(166,5){\line(10,17){56}}%
+\put(23,98){\line(10,17){45}}%
+\put(155,173){\line(10,-17){45}}%
+\put(66,22){\line(1,0){90}}%
+\put(220,98){\line(1,0){80}}%
+\end{picture}}}}
+
+% 横向きベンゼンパラ二置換体 \para
+\def\para{{\unitlength.1pt%
+\raisebox{-7pt}{\begin{picture}(378,195)%
+\linethickness{.5pt}%
+\font\tenln=linew10%
+\put(77,96){\line(100,173){57}}%
+\put(132,192){\line(1,0){113}}%
+\put(243,192){\line(100,-173){56}}%
+\put(77,98){\line(10,-17){57}}%
+\put(132,3){\line(1,0){113}}%
+\put(243,3){\line(100,173){56}}%
+\put(100,98){\line(100,173){45}}%
+\put(232,173){\line(100,-173){45}}%
+\put(143,22){\line(1,0){90}}%
+\put(297,98){\line(1,0){80}}%
+\put(0,98){\line(1,0){80}}%
+\end{picture}}}}

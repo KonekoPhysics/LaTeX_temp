@@ -1,0 +1,7 @@
+#!/bin/sh
+cp preamble.sty /Users/$USER/Library/texmf/tex/platex/
+cp prechemistry.sty /Users/$USER/Library/texmf/tex/platex/
+cp prefonts.sty /Users/$USER/Library/texmf/tex/platex/
+cp preprog.sty /Users/$USER/Library/texmf/tex/platex/
+cd /Users/$USER/Library/texmf/tex/platex/
+mktexlsr
