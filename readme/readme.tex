@@ -1,10 +1,12 @@
-%こねこ。のテンプレート（ver 2.1）
+%こねこ。のテンプレート（ver 2.2）
 %Copyright © 2021-2022 こねこ。 All Rights Reserved.
 
 \documentclass[a4paper, 9pt]{jsarticle}
 \usepackage[top=20truemm, bottom=20truemm, left=20truemm, right=20truemm]{geometry}
 
 \usepackage{preamble}
+%日本語を使うときは必須
+\usepackage{jpreamble}
 %化学用追加パッケージ
 \usepackage{prechemistry}
 %情報用追加パッケージ
@@ -12,14 +14,14 @@
 %フォント操作用追加パッケージ
 \usepackage{prefonts}
 
-\title{\sf{こねこ。のテンプレートver2.1使用方法}}
+\title{\sf{こねこ。のテンプレートver2.2使用方法}}
 \author{\sf{こねこ。}}
 \date{\sf{\today}}
 \begin{document}
 \maketitle
 こねこ。のテンプレートの使い方のうちよく使うものを，実際にこのtexファイルで使うことにより紹介しています．texファイルをいじったときにPDFが改変されて説明が読めなくなってしまう事故を防ぐために，PDFに関してはバックアップをとってあります．\par 
 \section{準備}
-\tt{preamble.sty}，\tt{prechemistry.sty}，\tt{preprog.sty}，\tt{prefonts.sty}を以下の場所にコピーしたのち，その場所に移動してから\tt{mktexlsr}コマンドを実行してください．\footnote{Linux用はないのか，などと言う人が必ずいますが，Linuxなんて物好きなものを使ってる人ならこの程度の処理は自分でコマンドで済ませたいと思いますのでつくりませんでした．みんな，Ubuntu使おうぜ．}
+\tt{preamble.sty}，\tt{preamblej.sty}，\tt{prechemistry.sty}，\tt{preprog.sty}，\tt{prefonts.sty}，を以下の場所にコピーしたのち，その場所に移動してから\tt{mktexlsr}コマンドを実行してください．\footnote{Linux用はないのか，などと言う人が必ずいますが，Linuxなんて物好きなものを使ってる人ならこの程度の処理は自分でコマンドで済ませたいと思いますのでつくりませんでした．みんな，Ubuntu使おうぜ．}
 \arki{
 	\item Windowsの場合：\tt{C:/texlive/texmf-local/tex/platex/}
  \item Macの場合：\tt{/Users/ユーザー名/Library/texmf/tex/platex/}
@@ -149,7 +151,7 @@ to[short](6,0)
 わかる人にはわかりますが，\tt{addplot}の中の数値を\tt{csv}読み出しなどでプログラムすると，わざわざ打ち込まなくてもグラフを書くことが可能です．\par 
 tikzに関するテンプレートはこのtexファイルの下にまとめてあるので適宜使ってください．
 \subsection{簡単なフォント操作}
-$\rm{latex}$，\gt{あいうえお}，\bf{latex}，\sf{latex}，\tt{latex}，$\bb{LATEX}$など．
+$\rm{latex}$，\bf{latex}，\sf{latex}，\tt{latex}，$\bb{LATEX}$など．
 \subsection{セクション記号}
 括弧付きで式番号を呼び出すときは，\ref{eq1}のようにします．また，\refeq{eq1}，\reffig{graph1}，\reftbl{tab1}のように使えるので，使ってみてください．単に\tt{ref}だけよりも使いやすいと思います．\par 
 また，定理や定義の表示を直してあります（もともとは英語）．
@@ -191,6 +193,8 @@ renewcommandで「labelenumi」を使う場合「\tt{arki}\{箇条書きの中�
 \romani{
 	\item a
 }
+\section{jpreamble.sty}
+\tt{textgt}のみ別にしてあります．これは\tt{jarticle}ではなく\tt{article}を使うことになっても\tt{preamble.sty}を使用できるようにしたためです．使い方は\gt{こんな感じ}です．
 
 \section{prechemistry.sty}
 ベンゼン環が書けます．また，\tt{mhchem}はめちゃくちゃ使いやすいです．\par 
