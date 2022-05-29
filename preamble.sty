@@ -219,7 +219,6 @@
 %rmk: (i)(ii)(iii)...
 %alph: a.,b.,c.,...
 %roman: i.,ii.,iii.,...
-
 \newcommand{\arki}[1]{\begin{enumerate}\renewcommand{\labelenumi}{(\arabic{enumi})}#1\end{enumerate}}
 \newcommand{\arkii}[1]{\begin{enumerate}\renewcommand{\labelenumii}{(\arabic{enumii})}#1\end{enumerate}}
 \newcommand{\arkiii}[1]{\begin{enumerate}\renewcommand{\labelenumiii}{(\arabic{enumiii})}#1\end{enumerate}}
@@ -244,5 +243,11 @@
 \newcommand{\romanii}[1]{\begin{enumerate}\renewcommand{\labelenumii}{\roman{enumii}.}#1\end{enumerate}}
 \newcommand{\romaniii}[1]{\begin{enumerate}\renewcommand{\labelenumiii}{\roman{enumiii}.}#1\end{enumerate}}
 \newcommand{\romaniv}[1]{\begin{enumerate}\renewcommand{\labelenumiv}{\roman{enumiv}.}#1\end{enumerate}}
+
+\newcommand{\eni}[2]{\begin{enumerate}\renewcommand{\labelenumi}{#1}#2\end{enumerate}}
+\newcommand{\enii}[2]{\begin{enumerate}\renewcommand{\labelenumii}{#1}#2\end{enumerate}}
+\newcommand{\eniii}[2]{\begin{enumerate}\renewcommand{\labelenumiii}{#1}#2\end{enumerate}}
+\newcommand{\eniv}[2]{\begin{enumerate}\renewcommand{\labelenumiv}{#1}#2\end{enumerate}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
